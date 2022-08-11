@@ -15,7 +15,7 @@ jobs:
       run: cd frontend && go build .
     
     - name: Build-backend
-      run: cd backend && go mod download && go build .
+      run: cd backend && go mod download && go get github.com/gomodule/redigo@v1.8.5 && go mod verify && go build .
         
     - name: Test
       run: cd frontend && go test . 
