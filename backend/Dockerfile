@@ -8,7 +8,6 @@ COPY . .
 RUN go build -o app.exe
 
 EXPOSE 9000
-EXPOSE 6379
 
 CMD ["/usr/src/app/app.exe"]
 
@@ -20,3 +19,7 @@ CMD ["/usr/src/app/app.exe"]
 
 #To stop container
 #docker container stop backend
+
+#Database 
+#docker pull redis
+#docker run --rm -d --name database -p 6379:6379 redis
