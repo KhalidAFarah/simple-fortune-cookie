@@ -11,9 +11,15 @@ jobs:
       with:
         go-version: 1.16 
 
-    - name: Build
-      run: go build -v ./...
+    - name: Build-frontend
+      run: cd frontend
+      run: go build .
+    
+    - name: Build-backend
+      run: cd backend
+      run: go build .
         
     - name: Test
-      run:  go test -v ./... 
+      run: cd frontend
+      run:  go test . 
 
