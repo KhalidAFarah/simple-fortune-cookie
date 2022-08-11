@@ -2,7 +2,7 @@ name: Continuos Integration
 on: push
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-host #changed from ubuntu-latest since i started a runner on the server
     steps:
     - uses: actions/checkout@v3
 
